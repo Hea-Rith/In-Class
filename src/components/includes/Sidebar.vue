@@ -1,12 +1,10 @@
 <template>
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <div class="brand-section position-relative">
-            <a href="#" class="brand-link d-flex align-items-center" @click.prevent="toggleUserMenu">
-                <img :src="logoImage" alt="Chat System Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light ml-2">Chat System</span>
-            </a>
-        </div>
+        <RouterLink to="/" class="brand-link">
+            <img :src="logoImage" alt="Chat System Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light">Chat System</span>
+        </RouterLink>
 
         <!-- Sidebar -->
         <div class="sidebar">
@@ -16,7 +14,7 @@
                     <img :src="emptyImage" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">Alexander Pierce</a>
+                    <router-link :to="{ name: 'Profile' }" class="d-block">{{ userStore.name }}</router-link>
                 </div>
             </div>
 
@@ -43,6 +41,7 @@
 <script setup>
 import logoImage from '@/assets/images/logoImage.svg';
 import emptyImage from '@/assets/images/emptyImage.svg';
+import { useUserStore } from '@/stores/user';
 
-// dropdown removed; sign-out handled elsewhere (e.g., Navbar or SignOut component)
+const userStore = useUserStore();
 </script>
