@@ -1,13 +1,14 @@
 import SignIn from '@/components/auth/SignIn.vue';
 import SignUp from '@/components/auth/SignUp.vue';
 import SignOut from '@/components/auth/SignOut.vue';
-import Profile from "@/components/auth/profile.vue";
+import Profile from '@/components/auth/Profile.vue';
 import Dashboard from '@/components/pages/Dashboard.vue';
 
 import Navbar from '@/components/includes/Navbar.vue';
 import Sidebar from '@/components/includes/Sidebar.vue';
 import Footer from '@/components/includes/Footer.vue';
 
+import Test from '@/components/pages/Test.vue';
 
 import { createRouter, createWebHistory } from 'vue-router';
 const routes = [
@@ -49,6 +50,17 @@ const routes = [
             sidebar: Sidebar,
             footer: Footer,
             default: Dashboard,
+        },
+        meta: { guarded: true },
+    },
+    {
+        path: '/tests',
+        name: 'Tests',
+        components: {
+            navbar: Navbar,
+            sidebar: Sidebar,
+            footer: Footer,
+            default: Test,
         },
         meta: { guarded: true },
     },
