@@ -36,7 +36,7 @@ import { h, ref, onMounted } from 'vue';
 import { apiGetStudentsWithDetails } from '@/functions/api/student';
 import { CloseModal, LoadingModal, MessageModal } from "@/functions/swal";
 import CustomTable from '@/components/includes/controls/CustomTable.vue';
-import emptyImage from '@/assets/images/emptyImage.png';
+import emptyImage from '@/assets/images/emptyImage.svg';
 import StudentModal from '@/components/includes/modals/StudentModal.vue';
 
 const StudentModalRef = ref(null);

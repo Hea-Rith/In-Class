@@ -44,7 +44,7 @@
 <script setup>
 import $ from 'jquery';
 import { ref, onMounted } from 'vue';
-import emptyImage from "@/assets/images/emptyImage.png";
+import emptyImage from "@/assets/images/emptyImage.svg";
 import { Cropper } from 'vue-advanced-cropper'
 import 'vue-advanced-cropper/dist/style.css';
 
