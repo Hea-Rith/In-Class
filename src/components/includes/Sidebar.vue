@@ -30,13 +30,22 @@
                             </p>
                         </RouterLink>
                     </li>
+                    <li class="nav-header">
+                        Certificate Management
+                    </li>
+                    <li class="nav-item">
+                        <router-link :to="{ name: 'StudentTests' }" active-class="active" class="nav-link">
+                            <i class="nav-icon fas fa-user-graduate"></i>
+                            <p>Student Tests</p>
+                        </router-link>
+                    </li>
 
                     <li class="nav-header">
                         Academic Management
                     </li>
                     <li class="nav-item">
                         <router-link :to="{ name: 'Students' }" active-class="active" class="nav-link">
-                            <i class="nav-icon fas fa-user-graduate"></i>
+                            <i class="nav-icon fas fa-users"></i>
                             <p>Students</p>
                         </router-link>
                     </li>
@@ -55,8 +64,8 @@
 </template>
 
 <script setup>
-import logoImage from '@/assets/images/logoImage.svg';
-import emptyImage from '@/assets/images/emptyImage.svg';
+import logoImage from '@/assets/images/logoImago.webp';
+import emptyImage from '@/assets/images/emptyImage.png';
 import { useUserStore } from '@/stores/user';
 const userStore = useUserStore();
 </script>
