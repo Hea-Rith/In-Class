@@ -64,8 +64,8 @@
 </template>
 
 <script setup>
-import logoImage from '@/assets/images/logoImago.webp';
-import emptyImage from '@/assets/images/emptyImage.png';
+import logoImage from '@/assets/images/logoImage.svg';
+import emptyImage from '@/assets/images/emptyImage.svg';
 import { useUserStore } from '@/stores/user';
 const userStore = useUserStore();
 </script>
